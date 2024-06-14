@@ -1,5 +1,5 @@
 Preface
-"Hack on things"
+- "Hack on things"
 
-Introduction
-
+Ch1
+- .sort() defaults to increasing order
