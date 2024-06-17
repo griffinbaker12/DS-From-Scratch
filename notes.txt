@@ -22,7 +22,7 @@ to keep reading and learning.
         method which returns an object with a __next__() method. If the class defines __next__(), you can
         just return self.
     - Sequence -> iterable which supports efficient element access using integer indices via the __getitem()__
-    special method and defines a __len()__ method that returns the sequence's length
+    special method and defines a __len__() method that returns the sequence's length
         - Dicts also support these methods, but it is considered a mapping because the lookups use arbitrary
         immutable keys rather than integers
         - All sequences are iterables, but in addition to supporting one-at-a-time iteration, a sequence
@@ -31,3 +31,8 @@ to keep reading and learning.
     by an index (like a file or infinite streams).
     - The iterator protocol does not require the __len__() method be implemented, only to signal when
     there are no more items.
+
+Iterator
+- When you implement the __iter__() and __next__() methods in your class, it integrates seamlessly with 
+Python's language constructs like for loops, map(), and list comps. These constructs implicitly call __next__()
+under the hood to fetch items, enabling custom objects to be used in a familiar, intuitive way.
