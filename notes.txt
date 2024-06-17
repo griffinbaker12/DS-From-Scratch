@@ -10,3 +10,24 @@ may also like. And I guess this book walks through ways that we can do this, fro
 exactly what is needed is much like ZoMM and his attachment to his bike.
 - I loved stats in college and love programming obviously and this seems to be the union of the two so am very excited
 to keep reading and learning.
+- Iterable vs iterator vs sequence
+    - Iterable -> object that has an __iter__ method which returns an iterator, or which defines a
+    __getitem__ method that can take sequential indexes starting from zero (and raises an IndexError when
+    the indexes are no longer valid); object that you can get an iterator from
+    - Iterator -> Object with a __next__ method; whenever you use a for loop, or map, or a list comp (which
+    is really cool, because when and if you build your own objects, you just need to implement the __next__
+    method to play nicely with these language constructs...DATA MODEL...so cool) this method is called
+    automatically to get each item from the iterator, thus going through the process of iteration 
+        - So what is really cool here is that to implement the iterator protocol, you define an __iter__()
+        method which returns an object with a __next__() method. If the class defines __next__(), you can
+        just return self.
+    - Sequence -> iterable which supports efficient element access using integer indices via the __getitem()__
+    special method and defines a __len()__ method that returns the sequence's length
+        - Dicts also support these methods, but it is considered a mapping because the lookups use arbitrary
+        immutable keys rather than integers
+        - All sequences are iterables, but in addition to supporting one-at-a-time iteration, a sequence
+        lets you jump directly to a given spot by index
+    - Not every iterable is a sequence. There are lots of things that you can iterate over but can't get
+    by an index (like a file or infinite streams).
+    - The iterator protocol does not require the __len__() method be implemented, only to signal when
+    there are no more items.

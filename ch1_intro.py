@@ -223,3 +223,5 @@ assert average_salary_by_bucket == {
     "less than two": 48000.0,
     "more than five": 79166.66666666667,
 }
+
+# Building your own iterator
