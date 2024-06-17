@@ -3,3 +3,10 @@ Preface
 
 Ch1
 - .sort() defaults to increasing order
+- These are problems that you can actually work on and solve, which is really fricking cool. Like someone may pop by
+your desk and say hey, we have this data, and want to use it to make recommendations for other things / people they
+may also like. And I guess this book walks through ways that we can do this, from naive to complex approaches uses ML.
+- Neovim is so fricking cool. Like the ability to completely customize your editors, your tools, and have them do 
+exactly what is needed is much like ZoMM and his attachment to his bike.
+- I loved stats in college and love programming obviously and this seems to be the union of the two so am very excited
+to keep reading and learning.
