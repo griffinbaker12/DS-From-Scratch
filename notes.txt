@@ -90,3 +90,10 @@ enter -> GENERATORS
     then need to iterate over
 - Type hints are just Python objects as well, so they can be assinged to variables to make them
 easier to refer to 
+
+Ch4
+- Vectors are points in a finite-dimensional space
+- Vectors add component-wise (must be of the same length)
+- Dot product -> sum of vectors' component-wise products
+    - How far v extends in the w direction
+    - Ie, what happened if you projected v onto w
