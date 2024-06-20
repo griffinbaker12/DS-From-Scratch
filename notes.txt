@@ -36,3 +36,57 @@ Iterator
 - When you implement the __iter__() and __next__() methods in your class, it integrates seamlessly with 
 Python's language constructs like for loops, map(), and list comps. These constructs implicitly call __next__()
 under the hood to fetch items, enabling custom objects to be used in a familiar, intuitive way.
+- Instead of focusing on how to get the next item, you can instead focus on what you want to do with it.
+
+Ch2
+- Probably don't import all of the contents of a module b/c you may inadvertantly overwrite variable names
+you already defined
+- Unhandled exceptions cause your program to crash
+- slice[i:j] -> [i, j) (meaning that i is inclusive and j is not)
+    - The third argument is known as the stride
+- Clean Pythonic way to:
+    - Create a list of sequential integers -> x = [i for i in range(10)]
+        - Maybe a better way is: list(range(10))
+    - Copy a list -> x[:]
+    - If you want to go backwards through a list, the first number has to be larger than the second
+- Tuples' are lists immutable cousins; pretty much anything that you can do to a list that doesn't 
+involve modifying it,you can do to a tuple
+- Default behavior for iterating dicts is to give you back the key
+- Dictionary keys must be hashable; in particular, you can not use lists as keys. The reason is that lists
+are mutable, and you need to use something immutable as a key.
+    - An object is hashable if it has a hash value that stays consistent durings its lifetime. 
+- Default dicts are useful when we want to use dicts to "collect" results by some key and don't want to have
+to check everytime to see if the key exists yet
+    - When you look up a key it doesn't contain, it first adds a value for it using a zero-arg fn you provide
+    when you created it
+- Sets are useful for fast lookups and to get all of the unique elements in a collection
+- You should use "is None" vs "== None" because classes are free to implement comparisons anyway they choose
+    - 'is' checks for object identity, and there is only 1 None object
+    - '==' checks for equivalence, which can change from object to object
+- any() and all() are cool fucntions which help you check for truthiness of the items within an iterable
+- sorted() returns a new list, .sort() modifies the list in place; both default from naively sorting from
+smallest to largest
+- If you only want the elements one at a time, there's no good reason to keep a bunch of numbers around...
+enter -> GENERATORS
+   - Can be iterated over just like lists, but generate their values lazily on demand 
+   - Range itself is lazy, but to create an iterator, you can do something like:
+        def gen_range(n):
+            i = 0
+            while i < n:
+                yield i
+                i+=1
+    - Generators maintain their internal state
+    - Infinite sequence:
+        def nat_nums():
+            i = 1
+            while True:
+                yield i
+                i+=1
+    - Flip side of laziness is that you can only iterate through the generator once 
+    - And what this means (being lazy), is that nothing happens until you iterate over it using 'for in' or
+    'next'
+- Zip -> zips two or more iterables together, returning a single iterable of corresponding function
+    - Know if something is lazy or not because when you call the function, it will return an object you 
+    then need to iterate over
+- Type hints are just Python objects as well, so they can be assinged to variables to make them
+easier to refer to 
