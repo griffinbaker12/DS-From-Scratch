@@ -98,3 +98,8 @@ Ch4
     - How far v extends in the w direction
     - Ie, what happened if you projected v onto w
 - Matrix with n rows and k colunms is referred to as an n x k matrix
+
+Ch5
+- Techniques and math we use to understand data
+- Median measures the value for which 50% of the data lies beneath
+    - Quantile is the same idea but for some specific percentile
