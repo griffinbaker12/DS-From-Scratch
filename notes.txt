@@ -97,3 +97,4 @@ Ch4
 - Dot product -> sum of vectors' component-wise products
     - How far v extends in the w direction
     - Ie, what happened if you projected v onto w
+- Matrix with n rows and k colunms is referred to as an n x k matrix
