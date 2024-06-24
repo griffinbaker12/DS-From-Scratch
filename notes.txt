@@ -103,3 +103,7 @@ Ch5
 - Techniques and math we use to understand data
 - Median measures the value for which 50% of the data lies beneath
     - Quantile is the same idea but for some specific percentile
+
+Ch6
+- CDF is the integral of its PDF
+
